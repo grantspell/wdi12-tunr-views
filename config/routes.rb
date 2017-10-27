@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   get '/artists', to: 'artists#index'
   get '/artists/new', to: 'artists#new'
   post '/artists', to: 'artists#create'
-  get '/artists/:id', to: 'artists#show'
+  get '/artists/:id', to: 'artists#show', as: 'artist'
   get '/artists/:id/edit', to: 'artists#edit'
   put '/artists/:id', to: 'artists#update'
+  patch '/artists/:id', to: 'artists#update'
   delete '/artists/:id', to: 'artists#destroy'
 end

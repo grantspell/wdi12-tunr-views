@@ -1,0 +1,14 @@
+<h1>Artists <a href="/artists/new">(+)</a></h1>
+
+<ul>
+<%# Instance variable coming  %>
+<%# from artist_controller %>
+
+  <% @artists.each do |artist| %>
+    <li>
+      <a href="/artists/<%= artist.id %>">
+        <%= artist.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
