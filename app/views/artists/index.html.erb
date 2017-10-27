@@ -1,4 +1,5 @@
-<h1>Artists <a href="/artists/new">(+)</a></h1>
+<%# <a href="/artists/new">(+)</a> %>
+<h1>Artists <%= link_to "(+)", new_artist_path%></h1>
 
 <ul>
 <%# Instance variable coming  %>
@@ -6,9 +7,10 @@
 
   <% @artists.each do |artist| %>
     <li>
-      <a href="/artists/<%= artist.id %>">
-        <%= artist.name %>
-      </a>
+      <%= link_to artist.name, artist_path(artist) %>
+      <%# <a href="/artists/<%= artist.id %>
+        <%# <%= artist.name %>
+      <%# </a> %>
     </li>
   <% end %>
 </ul>

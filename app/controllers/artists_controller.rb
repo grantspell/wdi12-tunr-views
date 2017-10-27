@@ -16,6 +16,7 @@ class ArtistsController < ApplicationController
     @new_artist = Artist.new(artist_params)
     @new_artist.save
 
+    # redirect_to "/artists/#{@new_artist.id}"
     redirect_to artist_path(@new_artist)
   end
 

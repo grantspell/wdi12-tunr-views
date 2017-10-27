@@ -1,12 +1,10 @@
 <h1> <%= @artist.name %> </h1>  
 <div>
   <%= button_to "Delete Artist", @artist, :method => :delete %>
-  <a href="/artists/<%= @artist.id %>/edit">Edit Artist</a>
+  <%= button_to "Edit Artist", edit_artist_path(@artist), :method => :get %>
 </div>
 
-
-<img class="artist-photo" src=<%= @artist.photo_url %> />
-
+<%= image_tag @artist.photo_url, class: 'artist-photo' %>
 <h3><%= @artist.nationality %></h3>
 
 <ul>

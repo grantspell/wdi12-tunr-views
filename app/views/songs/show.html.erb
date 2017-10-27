@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @song.title %></h1>
+<h3><%= @song.album %></h3>
+<p><%= @song.preview_url %></p>
+
+<%= audio_tag @song.preview_url, controls: true %>
+
+<%= link_to 'Edit', edit_artist_song_path(@artist, @song) %> |
+<%= link_to 'Back', artist_songs_path(@artist) %>
