@@ -1,13 +1,16 @@
+<%# Link Tag will build out an <a> tag that looks like this %> 
 <%# <a href="/artists/new">(+)</a> %>
+
 <h1>Artists <%= link_to "(+)", new_artist_path%></h1>
 
 <ul>
+
 <%# Instance variable coming  %>
 <%# from artist_controller %>
-
   <% @artists.each do |artist| %>
     <li>
       <%= link_to artist.name, artist_path(artist) %>
+      <%# Link Tag will build out an <a> tag that looks like this %> 
       <%# <a href="/artists/<%= artist.id %>
         <%# <%= artist.name %>
       <%# </a> %>

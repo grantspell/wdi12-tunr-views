@@ -7,9 +7,10 @@
 <%= image_tag @artist.photo_url, class: 'artist-photo' %>
 <h3><%= @artist.nationality %></h3>
 
+<h2>Songs <%= link_to "(+)", new_artist_song_path(@artist) %></h2>
 <ul>
-<% @artist.songs.each do |song| %>
-  <li><%= song.title %></li>
-<% end %>
+  <% @artist.songs.each do |song| %>
+    <li><%= link_to song.title, artist_song_path(@artist, song) %></li>
+  <% end %>
 </ul>
 
